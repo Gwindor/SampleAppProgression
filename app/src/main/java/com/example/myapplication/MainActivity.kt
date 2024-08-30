@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
                                 "note/{id}",
                                 arguments = listOf(navArgument("id") { type = IntType })
                             ) {
-                                NoteDetailsScreen(id = it.arguments?.getInt("id") ?: -1)
+                                NoteDetailsScreen()
                             }
                         }
                     }

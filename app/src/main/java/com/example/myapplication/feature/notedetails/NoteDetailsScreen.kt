@@ -9,8 +9,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 @Composable
 fun NoteDetailsScreen(
     modifier: Modifier = Modifier,
-    id: Int
+    viewModel: NoteViewModel = viewModel()
 ) {
+    val id = viewModel.test
     Column(modifier = modifier) {
         Text("id is $id")
     }
