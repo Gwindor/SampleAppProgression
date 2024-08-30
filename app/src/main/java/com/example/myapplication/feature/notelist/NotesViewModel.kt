@@ -23,9 +23,7 @@ class NotesViewModel(
         val Factory = viewModelFactory {
             initializer {
                 val repo = (this[APPLICATION_KEY] as MyApp).repo
-                NotesViewModel(
-                    repository = repo
-                )
+                NotesViewModel(repository = repo)
             }
 
         }

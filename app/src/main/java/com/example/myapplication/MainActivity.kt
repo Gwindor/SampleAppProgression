@@ -22,7 +22,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.myapplication.feature.notedetails.NoteDetailsScreen
-import com.example.myapplication.feature.notedetails.NoteViewModel
+import com.example.myapplication.feature.notedetails.NoteDetailsViewModel
 import com.example.myapplication.feature.notelist.NoteListScreen
 import com.example.myapplication.feature.notelist.NotesViewModel
 import com.example.myapplication.ui.theme.MyApplicationTheme
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 NoteDetailsScreen(
                                     modifier = Modifier,
-                                    viewModel = viewModel(factory = NoteViewModel.Factory)
+                                    viewModel = viewModel(factory = NoteDetailsViewModel.Factory)
                                 )
                             }
                         }
