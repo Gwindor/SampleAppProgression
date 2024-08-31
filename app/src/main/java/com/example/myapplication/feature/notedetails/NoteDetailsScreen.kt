@@ -6,12 +6,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun NoteDetailsScreen(
     modifier: Modifier = Modifier,
-    viewModel: NoteDetailsViewModel = viewModel()
+    viewModel: NoteDetailsViewModel = koinViewModel()
 ) {
     val note = viewModel.state.collectAsStateWithLifecycle()
     note.value?.let {

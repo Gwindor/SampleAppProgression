@@ -15,11 +15,12 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.myapplication.core.repository.NoteRepository
 import com.example.myapplication.ui.theme.MyApplicationTheme
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun NoteListScreen(
     modifier: Modifier = Modifier,
-    viewModel: NotesViewModel,
+    viewModel: NotesViewModel = koinViewModel(),
     onNavigateDetails: (Int) -> Unit
 ) {
     val state = viewModel.state.collectAsStateWithLifecycle()
