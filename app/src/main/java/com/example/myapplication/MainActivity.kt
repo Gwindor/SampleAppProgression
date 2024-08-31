@@ -49,7 +49,6 @@ class MainActivity : ComponentActivity() {
                         ) {
                             composable("home") {
                                 NoteListScreen(
-                                    modifier = Modifier,
                                     onNavigateDetails = {
                                         navController.navigate("note/$it")
                                     }
@@ -59,9 +58,7 @@ class MainActivity : ComponentActivity() {
                                 "note/{id}",
                                 arguments = listOf(navArgument("id") { type = IntType })
                             ) {
-                                NoteDetailsScreen(
-                                    modifier = Modifier
-                                )
+                                NoteDetailsScreen()
                             }
                         }
                     }
