@@ -1,7 +1,8 @@
 package com.example.myapplication
 
 import android.app.Application
-import com.example.myapplication.core.repository.NoteRepository
+import com.example.myapplication.core.data.repository.NoteRepository
+import com.example.myapplication.core.data.repository.NoteRepositoryImpl
 import com.example.myapplication.feature.notedetails.NoteDetailsViewModel
 import com.example.myapplication.feature.notelist.NotesViewModel
 import org.koin.android.ext.koin.androidContext
@@ -19,7 +20,7 @@ class MyApp : Application() {
             androidContext(this@MyApp)
             modules(
                 module {
-                    single { NoteRepository() }
+                    single<NoteRepository> { NoteRepositoryImpl() }
                     viewModel { NotesViewModel(get()) }
                     viewModel { NoteDetailsViewModel(get(), get()) }
                 }

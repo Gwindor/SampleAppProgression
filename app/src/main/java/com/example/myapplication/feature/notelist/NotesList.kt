@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.myapplication.core.repository.NoteRepository
+import com.example.myapplication.core.data.repository.NoteRepositoryImpl
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import org.koin.androidx.compose.koinViewModel
 
@@ -55,7 +55,7 @@ fun GreetingPreview() {
         NoteListScreen(
             modifier = Modifier,
             viewModel = NotesViewModel(
-                repository = NoteRepository()
+                repository = NoteRepositoryImpl()
             ),
             onNavigateDetails = {}
         )

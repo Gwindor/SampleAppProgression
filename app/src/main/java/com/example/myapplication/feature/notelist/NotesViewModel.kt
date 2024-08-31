@@ -2,7 +2,7 @@ package com.example.myapplication.feature.notelist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.core.repository.NoteRepository
+import com.example.myapplication.core.data.repository.NoteRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 
